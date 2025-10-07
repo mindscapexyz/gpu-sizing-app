@@ -106,6 +106,7 @@ def _predict_generic(context, TP, DP, concurrency, gpu_type, coeffs):
 
 def predict_latency(model, context, TP, DP, concurrency, gpu_type):
     if TP * DP > 8:
+        print("")
         msg = "⚠️ Invalid configuration: TP × DP must not exceed 8 GPUs."
         return (msg, msg)
     if gpu_type not in ["8× H100", "8× H200"]:
