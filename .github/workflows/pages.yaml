@@ -33,7 +33,7 @@ jobs:
 
       - name: Export Gradio app
         run: |
-          gradio export app.py --outdir dist
+          gradio export app.py dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
